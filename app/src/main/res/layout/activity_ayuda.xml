@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.example.a16alfonsofa.holamundo.AyudaActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tituloayuda"
+        android:textColor="@color/colorvacio"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/texttoayuda"
+        android:textColor="#202020" />
+
+    <Button
+        android:id="@+id/btnEspeTlf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/boton_redondo2"
+        android:drawableLeft="@drawable/ic_action_name"
+        android:onClick="llamarTlfEspe"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Teléfono de la esperanza"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn911"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/boton_redondo2"
+        android:drawableLeft="@drawable/ic_action_name"
+        android:onClick="llamarTlf911"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Emergencias"
+        android:textStyle="bold" />
+
+</LinearLayout>

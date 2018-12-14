@@ -1,11 +1,13 @@
 package com.example.a16alfonsofa.aurora01.Pantallas;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.*;
 
 import com.example.a16alfonsofa.aurora01.R;
+import com.example.a16alfonsofa.holamundo.AyudaActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,22 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View arg0) {
-                layoutInflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-                popupView = layoutInflater.inflate(R.layout.emergency_phones, null);
-                popupWindow = new PopupWindow(popupView, RadioGroup.LayoutParams.WRAP_CONTENT,
-                        RadioGroup.LayoutParams.WRAP_CONTENT);
-
-                btn_Cerrar = (Button) popupView.findViewById(R.id.id_cerrar);
-                btn_Cerrar.setOnClickListener(new Button.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        popupWindow.dismiss();
-                    }
-                });
-
-                popupWindow.showAsDropDown(btn_Abrir_Popup, 50, 0);
-
+                Intent i = new Intent(MainActivity.this, AyudaActivity.class);
+                startActivity(i);
             }
         });
     }

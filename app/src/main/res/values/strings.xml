@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Aurora</string>
+    <string name="tituloayuda">No estás solo</string>
+    <string name="texttoayuda">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id sodales nisl. Maecenas eleifend, nisi sit amet aliquet aliquam, quam nulla volutpat leo, eu ultrices magna justo eget nisl. Curabitur nisi elit, tincidunt quis nisl ac, tincidunt vehicula est. Praesent aliquet odio vel ex lobortis, et viverra nulla mollis. Fusce et tincidunt metus, ac commodo eros. Nullam id elit id erat consectetur auctor. Nunc sed laoreet lorem. Cras eleifend nec massa suscipit faucibus. Praesent augue ante, rhoncus ut libero sit amet, imperdiet mattis libero. </string>
 </resources>
