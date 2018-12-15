@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.a16alfonsofa.holamundo.AyudaActivity"></activity>
+        <activity android:name=".Pantallas.AyudaActivity"></activity>
     </application>
     <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 </manifest>

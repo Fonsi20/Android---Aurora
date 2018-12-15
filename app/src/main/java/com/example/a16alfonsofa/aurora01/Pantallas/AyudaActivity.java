@@ -1,4 +1,4 @@
-package com.example.a16alfonsofa.holamundo;
+package com.example.a16alfonsofa.aurora01.Pantallas;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -35,7 +35,7 @@ public class AyudaActivity extends AppCompatActivity {
                 requestPermissions(new String[]{android.Manifest.permission.CALL_PHONE}, LLAMADA_TELEFONO);
             }
         } else {
-            Intent i = new Intent(Intent.ACTION_CALL, Uri.parse("tel:(+34)986110011"));
+            Intent i = new Intent(Intent.ACTION_CALL, Uri.parse("tel:(+34)914590055"));
             startActivity(i);
         }
 
@@ -44,7 +44,7 @@ public class AyudaActivity extends AppCompatActivity {
     public void llamarTlf911(View v) {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-                Intent i = new Intent(Intent.ACTION_CALL, Uri.parse("tel:(+34)911"));
+                Intent i = new Intent(Intent.ACTION_CALL, Uri.parse("tel:(+34)112"));
                 startActivity(i);
             } else {
                 requestPermissions(new String[]{android.Manifest.permission.CALL_PHONE}, LLAMADA_TELEFONO);

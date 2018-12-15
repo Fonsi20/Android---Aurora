@@ -8,7 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context="com.example.a16alfonsofa.holamundo.AyudaActivity">
+    tools:context=".Pantallas.AyudaActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -31,10 +31,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:background="@drawable/boton_redondo2"
-        android:drawableLeft="@drawable/ic_action_name"
+        android:drawableLeft="@mipmap/ic_persona"
         android:onClick="llamarTlfEspe"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
         android:text="Teléfono de la esperanza"
         android:textStyle="bold" />
 
@@ -44,10 +44,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/boton_redondo2"
-        android:drawableLeft="@drawable/ic_action_name"
+        android:drawableLeft="@mipmap/ic_persona"
         android:onClick="llamarTlf911"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
         android:text="Emergencias"
         android:textStyle="bold" />
 

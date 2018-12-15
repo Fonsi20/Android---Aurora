@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorbtnredondofondo">#ffffff</color>
+    <color name="Gris">#f2f2f2</color>
     <color name="colorbtnredondoBorde">#d7dcef</color>
     <color name="colorvacio">#73cc8b</color>
 </resources>
