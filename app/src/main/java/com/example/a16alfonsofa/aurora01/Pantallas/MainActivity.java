@@ -1,13 +1,16 @@
 package com.example.a16alfonsofa.aurora01.Pantallas;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ImageSpan;
-import android.view.*;
-import android.widget.*;
+import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 
 import com.example.a16alfonsofa.aurora01.R;
 
@@ -16,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
     private ImageView btn1, btn2, btn3;
     private ImageButton btn_Abrir_Popup;
     private Button btn_Cerrar;
+    private RelativeLayout btn4;
     private LayoutInflater layoutInflater;
     private View popupView;
     private PopupWindow popupWindow;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btn1 = (ImageView) findViewById(R.id.button1);
         btn2 = (ImageView) findViewById(R.id.button2);
         btn3 = (ImageView) findViewById(R.id.button3);
+        btn4 = (RelativeLayout) findViewById(R.id.button4);
 
 
         btn1.setImageResource(R.mipmap.ic_happy_uncolor);
@@ -84,6 +88,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, ListaActividad.class);
+                startActivity(i);
+            }
+        });
+
 
         btn_Abrir_Popup.setOnClickListener(new Button.OnClickListener() {
 
@@ -94,30 +106,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-/*    public void feeling(View v) {
-
-        if (btn3.isChecked()) {
-            btn1.setButtonDrawable(R.mipmap.ic_happy_uncolor);
-            btn2.setButtonDrawable(R.mipmap.ic_neutral_uncolor);
-            btn3.setButtonDrawable(R.mipmap.ic_sad_color);
-        } else if (btn2.isChecked()) {
-            btn1.setButtonDrawable(R.mipmap.ic_happy_uncolor);
-            btn2.setButtonDrawable(R.mipmap.ic_neutro_color);
-            btn3.setButtonDrawable(R.mipmap.ic_sad_uncolor);
-        } else if (btn1.isChecked()) {
-            btn1.setButtonDrawable(R.mipmap.ic_happy_color);
-            btn2.setButtonDrawable(R.mipmap.ic_neutral_uncolor);
-            btn3.setButtonDrawable(R.mipmap.ic_sad_uncolor);
-        } else {
-            btn1.setButtonDrawable(R.mipmap.ic_happy_uncolor);
-            btn2.setButtonDrawable(R.mipmap.ic_neutral_uncolor);
-            btn3.setButtonDrawable(R.mipmap.ic_sad_uncolor);
-        }
-        btn1.setChecked(false);
-        btn2.setChecked(false);
-        btn3.setChecked(false);
-    }*/
 }
 
