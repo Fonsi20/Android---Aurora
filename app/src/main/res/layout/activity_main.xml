@@ -117,10 +117,18 @@
 
     <RelativeLayout
         android:id="@+id/seccionCenter"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/feelings">
+        android:layout_below="@id/feelings"
+        android:layout_marginTop="7dp">
 
+        <ImageView
+            android:id="@+id/imgCentreCORE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@drawable/sun"
+            android:scaleType="fitXY" />
 
     </RelativeLayout>
 
@@ -163,64 +171,57 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
+
     <RelativeLayout
-        android:layout_below="@id/textmore"
         android:id="@+id/seccionIup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="bottom">
+        android:layout_below="@id/textmore"
+        android:background="@drawable/boton_redondo_etiqueta_fondo_alerta">
 
-        <RelativeLayout
-            android:id="@+id/button4"
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/marginTop"
-            android:background="@drawable/boton_redondo_etiqueta_fondo_alerta">
+            android:layout_height="70dp"
+            android:layout_marginLeft="7dp"
+            android:background="@color/Gris"
+            android:gravity="center|left"
+            android:paddingLeft="70dp"
+            android:text="¿Que planes tienes para este fin de semana?"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="7dp"
+            android:gravity="center|left"
+            android:paddingLeft="70dp"
+            android:paddingTop="10dp"
+            android:text="Tarea diária"
+            android:textColor="@color/colorvacio"
+            android:textSize="10sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="7dp"
-                android:background="@color/Gris"
-                android:gravity="center|left"
-                android:paddingLeft="70dp"
-                android:text="¿Que planes tienes para este fin de semana?"
-                android:textColor="#000"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="7dp"
+            android:gravity="center|left"
+            android:paddingLeft="129dp"
+            android:paddingTop="10dp"
+            android:text="20 Septiembre 2017"
+            android:textColor="#000"
+            android:textSize="10sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:gravity="center|left"
-                android:paddingLeft="70dp"
-                android:paddingTop="10dp"
-                android:text="Tarea diária"
-                android:textColor="@color/colorvacio"
-                android:textSize="10sp"
-                android:textStyle="bold" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="7dp"
+            android:src="@mipmap/ic_test_uncolor" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:gravity="center|left"
-                android:paddingLeft="129dp"
-                android:paddingTop="10dp"
-                android:text="20 Septiembre 2017"
-                android:textColor="#000"
-                android:textSize="10sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingTop="7dp"
-                android:src="@mipmap/ic_test_uncolor" />
-
-        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>
 
