@@ -6,9 +6,6 @@
         android:height="@dimen/height_bottom" />
 
     <corners android:radius="@dimen/radiusboton" />
-    <solid android:color="@color/colorbtnredondofondo"/>
-    <stroke
-        android:width="2dp"
-        android:color="@color/colorbtnredondoBorde" />
+    <solid android:color="#fff" />
 
 </shape>

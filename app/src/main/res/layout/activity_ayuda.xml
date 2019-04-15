@@ -36,6 +36,7 @@
         android:paddingLeft="30dp"
         android:paddingRight="20dp"
         android:text="Teléfono de la esperanza"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
     <Button
@@ -49,6 +50,7 @@
         android:paddingLeft="30dp"
         android:paddingRight="20dp"
         android:text="Emergencias"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
 </LinearLayout>

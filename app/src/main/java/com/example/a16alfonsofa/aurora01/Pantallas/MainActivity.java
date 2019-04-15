@@ -17,9 +17,9 @@ import com.example.a16alfonsofa.aurora01.R;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView btn1, btn2, btn3;
-    private ImageButton btn_Abrir_Popup;
+    private ImageView btn_Abrir_Popup;
     private Button btn_Cerrar;
-    private RelativeLayout btn4;
+    private ImageView btn4;
     private LayoutInflater layoutInflater;
     private View popupView;
     private PopupWindow popupWindow;
@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_Abrir_Popup = (ImageButton) findViewById(R.id.btn_sos);
+        btn_Abrir_Popup = (ImageView) findViewById(R.id.btn_sos);
         btn1 = (ImageView) findViewById(R.id.button1);
         btn2 = (ImageView) findViewById(R.id.button2);
         btn3 = (ImageView) findViewById(R.id.button3);
-        btn4 = (RelativeLayout) findViewById(R.id.button4);
+        btn4 = (ImageView) findViewById(R.id.button4);
 
 
         btn1.setImageResource(R.mipmap.ic_happy_uncolor);

@@ -5,223 +5,208 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:layout_gravity="center"
+    android:background="@color/Gris"
     android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.a16alfonsofa.aurora01.Pantallas.MainActivity">
+    tools:context="Pantallas.MainActivity">
 
     <RelativeLayout
-        android:id="@+id/seccionSup"
+        android:id="@+id/interfazSuperior"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="190dp"
+        android:background="@color/background">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/Name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="Montserrat"
-                android:paddingLeft="10dp"
-                android:text="Hola Alfonso!"
-                android:textColor="#252525"
-                android:textSize="23sp" />
-
-            <TextView
-                android:id="@+id/howIam"
-                android:layout_width="171dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Name"
-                android:layout_marginTop="8dp"
-                android:fontFamily="Montserrat"
-                android:paddingLeft="10dp"
-                android:text="Como te sientes hoy?"
-                android:textColor="#252525"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <ImageButton
+        <ImageView
             android:id="@+id/btn_sos"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_sos_uncolor_white" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
-            android:background="#fff"
-            android:src="@mipmap/ic_sos_uncolor"
-            android:tint="#5ba8e8" />
+            android:layout_marginStart="174dp"
+            android:layout_marginLeft="174dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="174dp"
+            android:layout_marginRight="174dp"
+            android:text="@string/app_name"
+            android:textColor="@color/Gris"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="345dp"
+            android:layout_marginLeft="345dp"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/ic_persona" />
 
     </RelativeLayout>
 
-
-    <RelativeLayout
+    <android.support.v7.widget.CardView
         android:id="@+id/feelings"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/seccionSup"
-        android:layout_marginTop="@dimen/marginTop"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="220dp"
+        android:layout_below="@id/interfazSuperior"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="-114dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="@color/Gris"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp">
 
-        <ImageView
+
+        <TextView
+            android:id="@+id/buenosdias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Buenos días!"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/buenosdiasDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:text="Como te encuentras en el día de hoy? Escoge la imagen que mas te representa."
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <android.support.v7.widget.CardView
             android:id="@+id/button1"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/boton_redondo"
-            android:clickable="true"
-            android:padding="3dp"
-            android:textColor="@color/colorAccent" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
 
-        <ImageView
+            <ImageView
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_happy_uncolor" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:id="@+id/button2"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_toStartOf="@+id/button1"
-            android:layout_toLeftOf="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="145dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
 
-            android:background="@drawable/boton_redondo"
-            android:clickable="true"
-            android:padding="3dp"
-            android:textColor="@color/colorAccent" />
+            <ImageView
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_neutral_uncolor" />
+        </android.support.v7.widget.CardView>
 
-        <ImageView
+        <android.support.v7.widget.CardView
             android:id="@+id/button3"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_toStartOf="@+id/button2"
-            android:layout_toLeftOf="@+id/button2"
-            android:background="@drawable/boton_redondo"
-            android:clickable="true"
-            android:padding="3dp"
-            android:textColor="@color/colorAccent" />
-    </RelativeLayout>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="270dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_sad_uncolor" />
+        </android.support.v7.widget.CardView>
 
 
-    <RelativeLayout
-        android:id="@+id/seccionCenter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@id/feelings"
-        android:layout_marginTop="7dp">
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="@color/Gris"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp">
 
         <ImageView
-            android:id="@+id/imgCentreCORE"
+            android:layout_margin="0dp"
+            android:id="@+id/roundedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/man4" />
+
+        <TextView
+            android:layout_marginTop="230dp"
+            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:background="@drawable/sun"
-            android:scaleType="fitXY" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/textmore"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/seccionCenter"
-        android:layout_marginTop="3dp"
-        android:gravity="bottom"
-        android:orientation="horizontal">
+            android:text="La tarea de hoy es:"
+            android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/textmore1"
-            android:layout_width="166dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="250dp"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/marginTop"
-            android:layout_weight="1"
-            android:fontFamily="Montserrat"
-            android:paddingLeft="10dp"
-            android:text="tu siguiente consulta"
-            android:textColor="#252525"
-            android:textSize="15sp"
+            android:text="Cuentame algo sobre tu infancia:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textmore2"
-            android:layout_width="68dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="157dp"
-            android:layout_marginTop="@dimen/marginTop"
-            android:layout_toRightOf="@id/textmore1"
-            android:fontFamily="Montserrat"
-            android:foregroundGravity="right"
-            android:gravity="bottom"
-            android:paddingLeft="10dp"
-            android:text="VER TODO"
-            android:textColor="#1376e9"
-            android:textSize="10sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:id="@+id/seccionIup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textmore"
-        android:background="@drawable/boton_redondo_etiqueta_fondo_alerta">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginLeft="7dp"
-            android:background="@color/Gris"
-            android:gravity="center|left"
-            android:paddingLeft="70dp"
-            android:text="¿Que planes tienes para este fin de semana?"
-            android:textColor="#000"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginLeft="7dp"
-            android:gravity="center|left"
-            android:paddingLeft="70dp"
-            android:paddingTop="10dp"
-            android:text="Tarea diária"
-            android:textColor="@color/colorvacio"
-            android:textSize="10sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginLeft="7dp"
-            android:gravity="center|left"
-            android:paddingLeft="129dp"
-            android:paddingTop="10dp"
-            android:text="20 Septiembre 2017"
-            android:textColor="#000"
-            android:textSize="10sp" />
 
         <ImageView
+            android:id="@+id/button4"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="250dp"
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="7dp"
-            android:src="@mipmap/ic_test_uncolor" />
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_check" />
+    </android.support.v7.widget.CardView>
 
-    </RelativeLayout>
+
 </RelativeLayout>
 
