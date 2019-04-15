@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.a16alfonsofa.aurora01.Pantallas.ActividadIndividual">
+
+    <LinearLayout
+        android:id="@+id/SeccionEscribir"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cuentame algo sobre tu infancia:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Te acuerdas de esos dias con tus amigos, en el cole o en el parque? Seguro que tienes alguna anecdota maravillosa que recordar. Por nosotros no te preocupes, solo estamos aqui para escucharte y apoyarte."
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:lines="30"
+            android:maxLines="30"
+            android:minLines="10"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/SeccionVerVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="En ocasiones hay que buscar las cosas bellas que tiene la vida."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Con una sonrisa es mucho mejor tratar de encontrar la paz y la tranquilidad, y sabemos muy bien lo complicado que es simplemente sonreir cuando todo esta mal, pero tambien sabemos que de distraerse y ocupar la mente en otras cosas te puede ayudar mucho, dale una oportunidad a este video y luego sigue buscando contenidos que te hagan sentir bien."
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/youtube_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/boton_redondo2"
+        android:text="Finalizar tarea"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
