@@ -3,6 +3,7 @@ package com.example.a16alfonsofa.aurora01.Pantallas;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
 
         btn_Abrir_Popup = (ImageView) findViewById(R.id.btn_sos);
         btn1 = (ImageView) findViewById(R.id.button1);

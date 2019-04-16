@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
+import com.example.a16alfonsofa.aurora01.R;
 
 
 public class AyudaActivity extends AppCompatActivity {
