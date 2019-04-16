@@ -47,6 +47,7 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/profile"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
@@ -109,9 +110,9 @@
 
             <ImageView
                 android:id="@+id/button1"
-                android:layout_margin="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:scaleType="centerCrop"
                 android:src="@mipmap/ic_happy_uncolor" />
         </android.support.v7.widget.CardView>
@@ -131,9 +132,9 @@
 
             <ImageView
                 android:id="@+id/button2"
-                android:layout_margin="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:scaleType="centerCrop"
                 android:src="@mipmap/ic_neutral_uncolor" />
         </android.support.v7.widget.CardView>
@@ -153,9 +154,9 @@
 
             <ImageView
                 android:id="@+id/button3"
-                android:layout_margin="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:scaleType="centerCrop"
                 android:src="@mipmap/ic_sad_uncolor" />
         </android.support.v7.widget.CardView>
@@ -164,6 +165,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/feelings"
@@ -173,37 +175,36 @@
         app:cardElevation="5dp">
 
         <ImageView
-            android:layout_margin="0dp"
             android:id="@+id/roundedImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="0dp"
             android:scaleType="centerCrop"
             android:src="@drawable/man4" />
 
         <TextView
-            android:layout_marginTop="230dp"
-            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="230dp"
             android:text="La tarea de hoy es:"
             android:textColor="@color/black" />
 
         <TextView
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="250dp"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="250dp"
             android:text="Cuentame algo sobre tu infancia:"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/button4"
-            android:layout_marginStart="320dp"
-            android:layout_marginTop="250dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="250dp"
             android:background="@mipmap/ic_check" />
     </android.support.v7.widget.CardView>
 

@@ -17,10 +17,9 @@ import com.example.a16alfonsofa.aurora01.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView btn1, btn2, btn3;
-    private ImageView btn_Abrir_Popup;
+    private ImageView btn1, btn2, btn3, btn_Abrir_Popup, btnprofile;
+    private CardView btn4;
     private Button btn_Cerrar;
-    private ImageView btn4;
     private LayoutInflater layoutInflater;
     private View popupView;
     private PopupWindow popupWindow;
@@ -32,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         btn_Abrir_Popup = (ImageView) findViewById(R.id.btn_sos);
+        btnprofile = (ImageView) findViewById(R.id.profile);
         btn1 = (ImageView) findViewById(R.id.button1);
         btn2 = (ImageView) findViewById(R.id.button2);
         btn3 = (ImageView) findViewById(R.id.button3);
-        btn4 = (ImageView) findViewById(R.id.button4);
+        btn4 = (CardView) findViewById(R.id.button4);
 
 
         btn1.setImageResource(R.mipmap.ic_happy_uncolor);
@@ -91,6 +91,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, ActividadIndividual.class);
+                startActivity(i);
+            }
+        });
+
+        btnprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ListaActividad.class);
