@@ -1,0 +1,22 @@
+drop database IF EXISTS PSIDDBB;
+create database IF NOT EXISTS PSIDDBB;
+
+use PSIDDBB;
+
+create table if not exists Actividades (
+    id int(2) not null AUTO_INCREMENT,
+    nombreA varchar(50) not null,
+    descripcionA varchar(300) not null,
+    tipoA ENUM('escribir', 'leer', 'video'),
+    respuesta varchar(500) not null,
+    fechayhora datetime not null,
+    PRIMARY KEY (id),
+    unique index (nombreA)
+);
+
+create table if not exists Sentimientos (
+    fecha date not null,
+    sensacion ENUM('feliz', 'neutro', 'triste'),
+    respuesta float(5) not null,
+    PRIMARY KEY (fecha)
+);

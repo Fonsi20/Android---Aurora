@@ -1,6 +1,7 @@
 package com.example.a16alfonsofa.aurora01.Pantallas;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -8,21 +9,26 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
 
+import com.example.a16alfonsofa.aurora01.BBDD.BDHelper;
 import com.example.a16alfonsofa.aurora01.R;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
     private ImageView btn1, btn2, btn3, btn_Abrir_Popup, btnprofile;
     private CardView btn4;
-    private Button btn_Cerrar;
-    private LayoutInflater layoutInflater;
-    private View popupView;
-    private PopupWindow popupWindow;
+
+    private String BDname;
+    private int BDversion;
+    private SQLiteDatabase DBpsidb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
+        try {
+            deployDatabase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        BDname = "psidb";
+        BDversion = 1;
+        BDHelper bdhelper = new BDHelper(this, BDname, null, BDversion);
+        DBpsidb = bdhelper.getWritableDatabase();
 
         btn_Abrir_Popup = (ImageView) findViewById(R.id.btn_sos);
         btnprofile = (ImageView) findViewById(R.id.profile);
@@ -116,6 +132,42 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    private void deployDatabase() throws IOException {
+
+
+        //Open your local db as the input stream
+        String packageName = getApplicationContext().getPackageName();
+        String DB_PATH = "/data/data/" + packageName + "/databases/";
+        //Create the directory if it does not exist
+        File directory = new File(DB_PATH);
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
+        String DB_NAME = "psidb"; //The name of the source sqlite file
+
+        InputStream myInput = getAssets().open("psidb");
+
+        // Path to the just created empty db
+        String outFileName = DB_PATH + DB_NAME;
+
+        //Open the empty db as the output stream
+        OutputStream myOutput = new FileOutputStream(outFileName);
+
+        //transfer bytes from the inputfile to the outputfile
+        byte[] buffer = new byte[1024];
+        int length;
+        while ((length = myInput.read(buffer)) > 0) {
+            myOutput.write(buffer, 0, length);
+        }
+
+        //Close the streams
+        myOutput.flush();
+        myOutput.close();
+        myInput.close();
+
     }
 
     @Override
