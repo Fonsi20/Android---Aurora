@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
+
         btn_Abrir_Popup = (ImageView) findViewById(R.id.btn_sos);
         btnprofile = (ImageView) findViewById(R.id.profile);
         btn1 = (ImageView) findViewById(R.id.button1);
@@ -115,6 +116,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String tutorialKey = "SOME_KEY";
+        Boolean firstTime = getPreferences(MODE_PRIVATE).getBoolean(tutorialKey, true);
+        if (firstTime) {
+            runTutorial(); // here you do what you want to do - an activity tutorial in my case
+            getPreferences(MODE_PRIVATE).edit().putBoolean(tutorialKey, false).apply();
+        }
+    }
+
+    private void runTutorial() {
+        Intent i = new Intent(MainActivity.this, TutorialActivity.class);
+        startActivity(i);
     }
 }
 
