@@ -14,18 +14,19 @@ public class ListaActividad extends AppCompatActivity {
     ListView lista;
 
     String[][] datos = {
-            {"¿Que tal el dia?", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet ac eros tincidunt sodales. Nam tortor ipsum, accumsan vel porttitor in, consequat sit amet leo. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
-            {"Escoge la foto que más te gusta", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet ac eros tincidunt sodales. Nam tortor ipsum, accumsan vel porttitor in, consequat sit amet leo. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
-            {"¿Que es lo mejor que te pasó hoy?", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet ac eros tincidunt sodales. Nam tortor ipsum, accumsan vel porttitor in, consequat sit amet leo. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
-            {"¿Cual es tu comida favorita?", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet ac eros tincidunt sodales. Nam tortor ipsum, accumsan vel porttitor in, consequat sit amet leo. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
-            {"¿Quien era tu mejor amigo de la infancia?", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet ac eros tincidunt sodales. Nam tortor ipsum, accumsan vel porttitor in, consequat sit amet leo. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
-            {"Dime tu canción favorita!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet ac eros tincidunt sodales. Nam tortor ipsum, accumsan vel porttitor in, consequat sit amet leo. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
+            {"¿Que tal el dia?", "Loremtincidunt sodales. Nam tortor ipsum, accumsan. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
+            {"Escoge la foto que más te gusta", "Lorem ipsum dolor sit leo. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
+            {"¿Que es lo mejor que te pasó hoy?", "Lorem ipsum dolor sit ametin, consequat sit amet leo. Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
+            {"¿Cual es tu comida favorita?", "Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
+            {"¿Quien era tu mejor amigo de la infancia?", "Cras laoreet ac eros tincidunt sodales. Nam tortor ipsum, accumsan vel porttitor in, luctus eget diam."},
+            {"Dime tu canción favorita!", "Etiam turpis velit, ullamcorper ut lacinia eu, luctus eget diam."},
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_actividad);
+        getSupportActionBar().hide();
 
         lista = (ListView) findViewById(R.id.lvLista);
         lista.setAdapter(new Adaptador(ListaActividad.this, datos));
