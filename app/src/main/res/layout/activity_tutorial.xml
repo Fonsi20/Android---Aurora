@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgroundstars"
     android:orientation="vertical"
-    tools:context="com.example.a16alfonsofa.aurora01.Pantallas.TutorialActivity">
+    tools:context="com.example.a16alfonsofa.aurora01.TutorialActivity">
 
 
     <RelativeLayout

@@ -10,14 +10,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pantallas.TutorialActivity"></activity>
-        <activity android:name=".Pantallas.ActividadIndividual" />
+        <activity android:name=".Pantallas.ActividadIndividual" android:screenOrientation="portrait"/>
         <activity
             android:name=".Pantallas.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />
-
                 <category android:name="android.intent.category.ALTERNATIVE" />
             </intent-filter>
         </activity>
@@ -26,12 +24,18 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pantallas.AyudaActivity" />
-        <activity android:name=".Pantallas.ListaActividad" />
+        <activity android:name=".TutorialActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Pantallas.AyudaActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".Pantallas.ListaActividad" android:screenOrientation="portrait" />
     </application>
 
 </manifest>
