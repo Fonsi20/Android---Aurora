@@ -34,17 +34,6 @@ public class BDHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(SQLCrearActivi);
         sqLiteDatabase.execSQL(SQLCrearSenti);
-        /**
-         //Cambiar mayusculas de la tabla cereales.
-         sqLiteDatabase.execSQL("Update 'Alimentos' set nombreA = upper(substr(nombreA,0,2))||lower(substr(nombreA,2)) WHERE cat = 1;");
-
-         //Cereales y Derivados
-         sqLiteDatabase.execSQL("UPDATE " + tabla2 + " SET " + columna9 + "= '" + R.drawable.donut360 + "', " + columna10 + " = '" + R.drawable.donut + "' WHERE " + columna4 + " ='Donuts';");
-         sqLiteDatabase.execSQL("UPDATE " + tabla2 + " SET " + columna9 + "= '" + R.drawable.ricewjite360 + "', " + columna10 + " = '" + R.drawable.ricewhite + "' WHERE " + columna4 + " ='Arroz blanco';");
-         sqLiteDatabase.execSQL("UPDATE " + tabla2 + " SET " + columna9 + "= '" + R.drawable.oats360 + "', " + columna10 + " = '" + R.drawable.aots + "' WHERE " + columna4 + " ='Avena';");
-         sqLiteDatabase.execSQL("UPDATE " + tabla2 + " SET " + columna9 + "= '" + R.drawable.ensaimada360 + "', " + columna10 + " = '" + R.drawable.ensaimada + "' WHERE " + columna4 + " ='Eensaimada';");
-         sqLiteDatabase.execSQL("UPDATE " + tabla2 + " SET " + columna9 + "= '" + R.drawable.lasana360 + "', " + columna10 + " = '" + R.drawable.lasana + "' WHERE " + columna4 + " ='Lasaña';");
-         **/
     }
 
     @Override
